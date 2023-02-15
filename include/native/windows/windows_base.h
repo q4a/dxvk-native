@@ -313,3 +313,7 @@ typedef struct RGNDATA {
 
 #define FAILED(hr) ((HRESULT)(hr) < 0)
 #define SUCCEEDED(hr) ((HRESULT)(hr) >= 0)
+
+/* compatibility macros */
+#define RtlZeroMemory(Destination,Length) memset((Destination),0,(Length))
+#define ZeroMemory RtlZeroMemory
