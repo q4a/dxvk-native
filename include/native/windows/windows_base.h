@@ -40,8 +40,14 @@ typedef void VOID;
 typedef void* LPVOID;
 typedef const void* LPCVOID;
 
+// warning: in Windows `typedef __int64 LONG_PTR` on 64 bit systems
+// and `typedef long LONG_PTR` on 32 bit systems.
+// This was taken from vkd3d, so let's leave it as it was in vkd3d
+typedef long LONG_PTR;
+
 typedef size_t SIZE_T;
 
+typedef int8_t  INT8;
 typedef uint8_t UINT8;
 typedef uint8_t BYTE;
 
